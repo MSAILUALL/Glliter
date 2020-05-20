@@ -3,9 +3,12 @@ package com.manishsoft.Glliter.controller.copy;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.manishsoft.Glliter.Bo.GlliterEmployee;
 
 @RestController
 public class Glitter {
@@ -17,13 +20,15 @@ public class Glitter {
 	private List<String> msg;
 	@Value("#{${mapvalue}}")
 	private Map<String, String> dbvalue;
+	@Autowired
+	GlliterEmployee glliterEmployee;
 	
 	
 	@GetMapping("/gliter")
 	public String getGliter() {
 		dbvalue.get("connection");
 		System.out.println("======"+dbvalue.get("connection"));
-		return message+"-----"+msg+"-----"+msg1+"----"+dbvalue;
+		return message+"-----"+msg+"-----"+msg1+"----"+dbvalue+"========"+glliterEmployee.toString();
 		
 
 	}
