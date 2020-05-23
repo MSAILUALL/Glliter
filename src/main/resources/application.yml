@@ -1,0 +1,19 @@
+test: Fine
+message: Welcome to properties ${test}
+listMessage: i,love,you
+mapvalue: "{connection:'//localhost',UserName:'foo',Pwd:'loo'}"
+emp: 
+  f_Name: Manish
+  l_Name: Kumar
+emp.sal: 90000
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+        
+spring:
+  profiles:
+    active:
+    - test
