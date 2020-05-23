@@ -1,0 +1,14 @@
+test: Fine Jobe
+message: Welcome to External properties ${test}
+listMessage: i,love,you,Mona
+mapvalue: "{connection:'//localhost',UserName:'root',Pwd:'root'}"
+emp: 
+  f_Name: Manish
+  l_Name: Kumar
+emp.sal: 70000
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
